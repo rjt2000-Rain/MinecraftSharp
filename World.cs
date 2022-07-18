@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Media.Media3D;
-using System.Windows;
 
 namespace MinecraftSharp
 {
@@ -23,14 +21,14 @@ namespace MinecraftSharp
             {
                 for (int x = 0; x < Chunk_Radius; x++)
                 {
-                    Quad1[16 * z + x] = new Chunk(new Vector(x, z));
-                    Quad2[16 * z + x] = new Chunk(new Vector(x - 1, z));
-                    Quad3[16 * z + x] = new Chunk(new Vector(x - 1, z - 1));
-                    Quad4[16 * z + x] = new Chunk(new Vector(x, z - 1));
-                    ChunkFill(Quad1[16 * z + x]);
-                    ChunkFill(Quad2[16 * z + x]);
-                    ChunkFill(Quad3[16 * z + x]);
-                    ChunkFill(Quad4[16 * z + x]);
+                    //Quad1[16 * z + x] = new Chunk(new Vector(x, z));
+                    //Quad2[16 * z + x] = new Chunk(new Vector(x - 1, z));
+                    //Quad3[16 * z + x] = new Chunk(new Vector(x - 1, z - 1));
+                    //Quad4[16 * z + x] = new Chunk(new Vector(x, z - 1));
+                    //ChunkFill(Quad1[16 * z + x]);
+                    //ChunkFill(Quad2[16 * z + x]);
+                    //ChunkFill(Quad3[16 * z + x]);
+                    //ChunkFill(Quad4[16 * z + x]);
                 }
             }
         } 
@@ -43,7 +41,7 @@ namespace MinecraftSharp
                 {
                     for (int x = 0; x < 16; x++)
                     {
-                        chunk.AddBlock(new Block(new Vector3D(x, y, z)));
+                    //    chunk.AddBlock(new Block(new Vector3D(x, y, z)));
                     }
                 }
             }

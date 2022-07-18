@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Media.Media3D;
-using SharpGL;
 
 namespace MinecraftSharp
 {
@@ -15,11 +12,11 @@ namespace MinecraftSharp
         private const short Height = 64;
         private 
         Block[] blocks = new Block[Width * Width * Height];//split into horizontal squares bottom up, then north-south from bottom like reading
-        Vector localCoord;
+        //Vector localCoord;
 
-        public Chunk(Vector coord)
+        public Chunk()//Vector coord)
         {
-            localCoord = coord;
+            //localCoord = coord;
         }
 
         public void AddBlock(Block block)
@@ -34,7 +31,7 @@ namespace MinecraftSharp
                256,257,258,259...
              */
             block.Parent = this;
-            blocks[(int)(block.LocalCoord.Y * 256 + block.LocalCoord.Z * 16 + block.LocalCoord.X)] = block;
+            //blocks[(int)(block.LocalCoord.Y * 256 + block.LocalCoord.Z * 16 + block.LocalCoord.X)] = block;
             //           y level                    north-south               east-west
         }
     }
